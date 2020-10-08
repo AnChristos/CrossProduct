@@ -20,10 +20,8 @@ crossVecSSE(double* __restrict__ c,
   //
   using namespace CxxUtils;
   using vec2 = CxxUtils::vec<double, 2>;
-  vec2 A_yz;
-  vload(A_yz, &a[1]);
-  vec2 B_yz;
-  vload(B_yz, &b[1]);
+  vec2 A_yz{ a[1], a[2] };
+  vec2 B_yz{ b[1], b[2] };
 
   vec2 B_x{ b[0], 0 };
   vec2 B_zx{};
