@@ -36,7 +36,8 @@ crossVecSSE(double* __restrict__ c,
   vec2 A_zx_B_yz = A_zx * B_yz;
 
   vec2 C_xy = A_yz_x_B_zx - A_zx_B_yz;
+
   vstore(&c[0], C_xy);
-  c[2] = a[0] * B_yz[0] - A_yz[0] * b[0];
+  c[2] = a[0] * b[1] - a[1] * b[0];
 }
 #endif
